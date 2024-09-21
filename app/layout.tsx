@@ -20,7 +20,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
 	title: "Meowem Hissum",
-	description: "Generated pawsum placeholder text.",
+	description: "Generate themed placeholder text.",
 };
 
 export default function RootLayout({
