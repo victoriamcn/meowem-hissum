@@ -6,9 +6,9 @@ export default function Home() {
 			className='flex flex-col p-5 items-center h-screen bg-zinc-100 '
 			style={{ gap: "10px" }}
 		>
-			<p className='text-lg'>Content A</p>
-			<p className='text-lg'>Content B</p>
-			<p className='text-lg'>Content C</p>
+			<h1 className='text-lg'>Meowem Hissum</h1>
+			<p className='text-lg'>Form Here</p>
+			<p className='text-lg'>Generated Text Here</p>
 		</section>
 	);
 }
