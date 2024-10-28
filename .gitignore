@@ -1,10 +1,44 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-.yarn/install-state.gz
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
 
 # testing
 /coverage
@@ -12,26 +46,69 @@
 # next.js
 /.next/
 /out/
-
-# production
+.next
+out
+.nuxt
+dist
 /build
 
-# misc
-.DS_Store
-*.pem
+# runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
 # local env files
 .env
 .env*.local
 
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+.yarn/install-state.gz
+jspm_packages/
+web_modules/
+
+# database
+*.rdb
+.serverless/
+
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# debug
+npm-debug.log*
+
+# caches
+.npm
+.eslintcache
+.cache
+.parcel-cache
+
+# vs code
+.history/
+.vscode/*
+.vscode-test
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.vsix
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
