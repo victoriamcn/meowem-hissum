@@ -1,25 +1,52 @@
 import Home from "@/app/page";
 import { render, screen } from "@testing-library/react";
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
-describe("should render properly", () => {
-	it("should contain the text", () => {
-		render(<Home />); // ARRANGE
+describe("should render heading properly", () => {
+	it("should be a header element", () => {
+		render(<Home />);
 
-		const headingEl = screen.getByRole("heading", { // ACTION
+		const headingEl = screen.getByRole("heading", {
 			name: /Meowem Hissum/i,
 		});
 
-		expect(headingEl).toBeInTheDocument(); // ASSERT
+		expect(headingEl).toBeInTheDocument();
 	});
 });
 
-it("should contain the text 'Meowem Hissum'", () => {
-  render(<Home />); // ARRANGE
+describe("should render form properly", () => {
+	it("should contain one textbox", () => {
+		render(<Home />);
 
-  const headingEl = screen.getByText(/Form Here/i, {
-    selector: "p",
-  }); // ACTION
+		const textbox = screen.getByRole("textbox", {
+			name: /Amount/i,
+		});
 
-  expect(headingEl).toBeInTheDocument(); // ASSERT
+		// const inputType = screen.getByRole("textbox", {
+		// 	name: /Type/i,
+		// });
+
+		expect(textbox).toBeInTheDocument();
+		// expect(inputType).toBeInTheDocument();
+	});
+
+	it("should contain a dropdown", () => {
+		render(<Home />);
+
+		const dropdown = screen.getByRole("combobox", {
+			name: /Type/i,
+		});
+
+		expect(dropdown).toBeInTheDocument();
+	});
+
+	it("should contain one button", () => {
+		render(<Home />);
+
+		const button = screen.getByRole("button", {
+			name: /Generate/i,
+		});
+
+		expect(button).toBeInTheDocument();
+	});
 });
